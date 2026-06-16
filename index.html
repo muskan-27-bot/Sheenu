@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Voice Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f6; padding: 20px; max-width: 600px; margin: 0 auto; }
+        .box { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        textarea { width: 100%; height: 80px; box-sizing: border-box; margin-bottom: 10px; }
+        #chat-window { height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; background: #fafafa; }
+        .msg { margin: 8px 0; padding: 8px; border-radius: 5px; }
+        .user { background: #e1ffd4; text-align: right; }
+        .bot { background: #e2f0ff; text-align: left; }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        button { padding: 10px 15px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; }
+        button:disabled { background-color: #cccccc; }
+        select { padding: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>🤖 Data-Driven Voice Chatbot</h2>
+    
+    <div class="box">
+        <h3>1. Paste Your Knowledge Data Here:</h3>
+        <textarea id="knowledge-base" placeholder="Example: Company ABC provides premium web hosting. Support is available 24/7. Standard plans cost $10/month. Standard plan supports up to 3 domains."></textarea>
+    </div>
+
+    <div class="box">
+        <div id="chat-window"></div>
+        
+        <div class="controls">
+            <select id="lang-select">
+                <option value="en-US">English</option>
+                <option value="hi-IN">Hindi (हिंदी)</option>
+            </select>
+            <button id="mic-btn">🎙️ Click to Speak</button>
+            <span id="status">Ready</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
